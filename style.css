@@ -105,9 +105,26 @@ ol {
 .cta input, .cta select {
   padding: 14px;
   border-radius: 8px;
-  border: none;
+  border: 1px solid #222;
   background: #1a1a24;
   color: white;
+  font-size: 0.95rem;
+}
+
+.cta input:focus, .cta select:focus {
+  outline: 2px solid #742dfc;
+  outline-offset: 2px;
+}
+
+.form-status {
+  min-height: 22px;
+  font-size: 0.85rem;
+  color: #9b5dff;
+  text-align: center;
+}
+
+.form-status.error {
+  color: #ff6b6b;
 }
 
 .hidden {

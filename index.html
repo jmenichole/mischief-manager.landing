@@ -61,8 +61,9 @@
     <h2>Get Early Access</h2>
     <p>Join the waitlist to try Mischief Manager before launch.</p>
 
-    <form id="waitlistForm">
-      <input type="email" name="email" placeholder="Your email" required />
+    <form id="waitlistForm" novalidate>
+      <input type="email" name="email" placeholder="Your email" autocomplete="email" required />
+      <input type="text" name="handle" placeholder="Optional: Discord/Twitter handle" autocomplete="off" />
       <select name="source" required>
         <option value="">Where do you get hit most?</option>
         <option>Email</option>
@@ -72,10 +73,11 @@
         <option>Crypto/Web3</option>
         <option>Everywhere 😭</option>
       </select>
-      <button type="submit" class="btn">Join the Waitlist</button>
+      <button type="submit" class="btn" id="waitlistSubmit">Join the Waitlist</button>
+      <div class="form-status" id="formStatus" aria-live="polite"></div>
     </form>
 
-    <p id="successMessage" class="hidden">🔥 You're in! Mischief protected.</p>
+    <p id="successMessage" class="hidden">🔥 You're in! Mischief protected. Check your inbox.</p>
   </section>
 
   <footer>
